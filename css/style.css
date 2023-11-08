@@ -1,0 +1,249 @@
+@charset "utf-8";
+
+/* font-size */
+:root {
+  --big: 50px;
+  --subtitle: 40px;
+  --menu: 20px;
+  --content: 18px;
+  --medium: 16px;
+}
+
+/* Color */
+
+:root {
+  --white: #ffffff;
+  --gray: #cfcfcf;
+  --dark: #000000;
+  --dark-clear: #202020;
+  --point: #184b9f;
+  --color-clear: rgba(255, 255, 255, 0);
+  --inner-menu: #0000003b;
+}
+
+/* a Color */
+
+nav a:link {
+  color: var(--white);
+}
+
+nav a:visited {
+  color: var(--white);
+}
+
+nav a:hover {
+  color: var(--gray);
+}
+
+nav a:active {
+  color: var(--gray);
+}
+
+/* 공통 */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  max-width: 1920px;
+  margin: 0px auto;
+  /* text-align: center; */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+/* menu */
+
+nav {
+  max-width: 1920px;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  z-index: 9999;
+  background-color: var(--inner-menu);
+}
+
+#logo {
+  color: var(--white);
+  font-size: var(--menu);
+  position: absolute;
+  left: 90px;
+  margin: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.menu_wrap ul {
+  position: absolute;
+  margin: 10px;
+  right: 90px;
+}
+
+.menu_wrap li {
+  margin-left: 30px;
+  text-transform: capitalize;
+}
+
+/* header */
+
+.h_media {
+  width: 100%;
+  height: 800px;
+  background-color: var(--dark);
+}
+
+.h_media video {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  filter: brightness(90%) contrast(110%);
+  z-index: -1;
+}
+
+.h_wrap {
+  color: var(--white);
+  max-width: 500px;
+  position: absolute;
+  top: 350px;
+  left: 100px;
+}
+
+.h_wrap .h_title {
+  font-size: var(--big);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.h_wrap .h_txt {
+  font-size: var(--content);
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+/* section */
+
+#menu1,
+#menu2,
+#menu3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 1100px;
+}
+
+#menu1 {
+  background-color: var(--dark);
+}
+
+.skills {
+  position: absolute;
+  top: 300px;
+  width: 60%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 50px;
+  overflow: hidden;
+}
+
+.item {
+  width: 200px;
+  height: 200px;
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.item .adobe {
+  width: 80px;
+  height: 80px;
+  margin-left: 60px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.item p {
+  font-size: var(--content);
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+#menu2 {
+  background-image: url(../images/bulb-2124338.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.sub_wrap {
+  position: absolute;
+  left: 0px;
+  top: 150px;
+  width: 100%;
+  height: 50px;
+}
+
+.sub_txt {
+  font-size: var(--subtitle);
+  color: var(--white);
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#menu3 {
+  background-color: var(--dark);
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  display: block;
+  background-color: var(--dark-clear);
+}
+
+/* 반응형 */
+
+@media screen and (max-width: 450px) {
+  .h_wrap {
+    left: 40px;
+    right: 40px;
+  }
+
+  #logo {
+    left: 30px;
+  }
+}
